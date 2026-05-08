@@ -574,6 +574,77 @@ p { font-size: 1rem; line-height: 1.75; }
 }
 
 /* =============================================
+   BRANDS BAR
+   ============================================= */
+.brands-bar {
+  background: var(--white);
+  padding: 56px 0;
+  border-bottom: 1px solid var(--gray-light);
+}
+
+.brands-bar__label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gray);
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.brands-bar__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+  align-items: center;
+}
+
+.brand-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 12px;
+  border-radius: var(--radius);
+  border: 1px solid var(--gray-light);
+  transition: var(--transition);
+}
+
+.brand-item:hover {
+  border-color: transparent;
+  box-shadow: var(--shadow-card);
+  transform: translateY(-3px);
+}
+
+.brand-name {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1rem, 1.6vw, 1.4rem);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  line-height: 1;
+  transition: var(--transition);
+}
+
+.brand-canon  { color: #CC0000; }
+.brand-konica { color: #003087; font-size: clamp(0.7rem, 1.1vw, 1rem); }
+.brand-kyocera{ color: #E4002B; }
+.brand-ricoh  { color: #005BAC; }
+.brand-sharp  { color: #1A1A1A; }
+.brand-xerox  { color: #E5002B; }
+
+@media (max-width: 1024px) {
+  .brands-bar__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .brands-bar__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =============================================
    HOW IT WORKS
    ============================================= */
 .how-it-works {
